@@ -22,31 +22,30 @@
     <!-- IF using Sass (run gulp sass first), then uncomment below and remove the CSS includes above
     <link href="css/ionic.app.css" rel="stylesheet">
     -->
+    <!-- JQuery -->
 
     <!-- ionic/angularjs js -->
     <script src="lib/ionic/js/ionic.bundle.js"></script>
 
     <!-- cordova script (this will be a 404 during development) -->
-    <script src="cordova.js"></script>
+    <!--<script src="cordova.js"></script>-->
 
     <!-- your app's js -->
+    <script src="lib/oclazyload/ocLazyLoad.js"></script>
     <script src="js/app.js"></script>
-    <script src="js/controllers.js"></script>
-    <script src="js/services.js"></script>
+    <!-- 初始化必要的内置provider -->
+    <script src="js/config.js"></script>
+    <!-- 配置lazyload -->
+    <script src="js/config.lazyload.js"></script>
+    <!-- 路由 -->
+    <script src="js/config.router.js"></script>
+    <!-- 第三方库 -->
   </head>
-  <body ng-app="starter">
-    <!--
-      The nav bar that will be updated as we navigate between views.
-    -->
+  <body ng-app="app">
     <ion-nav-bar class="bar-stable">
       <ion-nav-back-button>
       </ion-nav-back-button>
     </ion-nav-bar>
-    <!--
-      The views will be rendered in the <ion-nav-view> directive below
-      Templates are in the /templates folder (but you could also
-      have templates inline in this html file if you'd like).
-    -->
     <ion-nav-view></ion-nav-view>
   </body>
 </html>
